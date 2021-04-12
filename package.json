@@ -1,7 +1,7 @@
 {
-  "name": "greasemonkey-webpack-typescript-boilerplate",
-  "version": "1.0.4",
-  "description": "A Greasemonkey/Tampermonkey Webpack + TypeScript boilerplate",
+  "name": "twitter-analytics-dark-theme",
+  "version": "1.0.0",
+  "description": "A Monokai-inspired dark mode for Twitter's analytics (Greasemonkey/Tampermonkey)",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack",
@@ -12,11 +12,12 @@
     "url": "git+https://github.com/tarkant/greasemonkey-webpack-typescript-boilerplate.git"
   },
   "keywords": [
-    "Boilerplate",
+    "Twitter Analytics",
     "Greasemonkey",
-    "Webpack",
+    "Twitter Theme",
     "Tampermonkey",
-    "TypeScript"
+    "Dark mode",
+    "Monokai"
   ],
   "author": "Tarek Jellali",
   "license": "GPL-3.0-or-later",
@@ -35,7 +36,7 @@
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
     "webpack": "^5.26.3",
-    "webpack-cli": "^4.5.0",
+    "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-dev-server-inject-scripts": "^0.2.0"
   }

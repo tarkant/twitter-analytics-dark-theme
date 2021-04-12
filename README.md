@@ -1,72 +1,49 @@
-# 🐵 Greasemonkey Webpack + TypeScript boilerplate
+# Twitter Analytics Dark mode 🐣
 
-Create your Greasemonkey userscripts with the comfort of Webpack and TypeScript.
+![](./img/twitter-analytics-dark-mode.gif)
 
-## 📑 What's the purpose of this boilerplate?
+Twitter Analytics Dark mode theme inspired from Monokai palette.
 
-This will help you generate a userscript file while being able to write everything in TypeSript. You can also inject SCSS files and HTML. This uses no fancy frameworks or libs to avoid interfering with your destination website but of course, you're free to do whatever you like. I believe that Webpack will bundle your libs in a way that they will not interfere with the destination page.
+To use this userscript:
 
-## 🍴 How to use this boilerplate ?
+* If you're a Chrome ([or other Chromium-based browser](https://alternativeto.net/category/browsers/chromium-based/)) user, you'll have to install [TamperMonkey 🔳](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
+* If you're a Firefox user, you can install [GreaseMonkey 🐵](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/).
 
-Simple, just click the "Use this template" button or better, [click here](https://github.com/tarkant/greasemonkey-webpack-typescript-boilerplate/generate) and create your repo.
+[Next to install the script just click here 💾](https://github.com/tarkant/twitter-analytics-dark-theme/raw/master/dist/twitter-analytics-dark-theme.user.js)
 
-Next, run the good old :
-```bash
-npm install
+## Make it your own 🌈
+
+You can change the color palette and customize this dark mode as you wish, just head to `./src/scss/style.css` and you'll find the following:
+
+```scss
+// The base background for the whole page and the navbar
+$background: #1b1d1e;
+// Color of the heart icon on your Top tweet for example
+$background-ligher: #75715e;
+// Background color used for dropdown menus in the navbar and "Top Follower" card
+$background-darker: #272820;
+// Text color of some buttons
+$black: #000;
+// Buttons, links and borders color
+$blue: #66d9ef;
+// Text color for almost everything
+$white: #fff;
+// Empathy text for small titles and the "Advertise on twitter" section
+$yellow: #e6db74;
+// 28 day summary text as well as the sub-header with "Month 2021"
+$orange: #fd971f;
+// Red color for the negative metric values
+$danger: #f92672;
+// Green color for the positive metrics
+$success: #a6e22e;
 ```
 
-Finally and very importantly, go to the file `post-build.js` and replace the @match pattern with your destination website :
-
-```js
-// @match        http://example.com/
-```
-
-**Note:** You can still install the current boilerplate userscript [by clicking here](https://github.com/tarkant/greasemonkey-webpack-typescript-boilerplate/raw/master/dist/greasemonkey-webpack-typescript-boilerplate.user.js) then headint to [http://example.com/](http://example.com/), you'll see a div with injected html and CSS 😊 .
-
-## ⚙ How does the post-build.js work?
-
-This script file will be ran by NodeJS to prepend the header needed for Greasemonkey to detect that it is a userscript. I tried to make it as automatic as possible so it will read the package.json information and add them to the userscript.
-
-Mainly the script will take these information from the package.json :
-- name
-- version
-- description
-- license
-- author
-
-**Important note:** To gather the Github repo url, the script replaces some strings in this funky line of code :
-```js
-const url = package.repository.url.replace('git+', '').replace('.git', '');
-```
-If by some change something goes wrong, you know where to look.
-
-**Important note 2:** The script also adds the update and download url by taking the precedent url and adding some static text using this funky line :
-```js
-const updateUrl = package.repository.url.replace('git+', '').replace('.git', '') + '/raw/master/dist/' + distUserScript;
-```
-Again, if you don't understand why something is going wrong, this might be the culprit.
-
-## ⚒ How to build my userscript ?
-
-To build your userscript just run :
-
-```bash
-npm run build
-```
-
-This will the userscript in the `dist` folder that you can install on Greasemonkey or Tampermonkey.
-
+Below is simple CSS, selectors are a little messy but they do the job. Make sure to post an issue if something is not working correctley.
 
 ## 🆘 Issues and contributions
 
 If you have an issue with the boilerplate or want to contribute, please let me know I'll be happy to interact with you.
 
-Happy hacking!
-
 ## ⏲ Changelog
 
-- v1.0.4: Improve HTML importing
-- v1.0.3: Fix example.com `@match` pattern
-- v1.0.2: Bump packages version
-- v1.0.1: Minor fixes & made userscript work for example.com
-- v1.0.0: Base boilerplate
+- v1.0.0: Initial version

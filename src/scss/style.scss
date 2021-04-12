@@ -1,4 +1,142 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #b00b15;
+// The base background for the whole page and the navbar
+$background: #1b1d1e;
+// Color of the heart icon on your Top tweet for example
+$background-ligher: #75715e;
+// Background color used for dropdown menus in the navbar and "Top Follower" card
+$background-darker: #272820;
+// Text color of some buttons
+$black: #000;
+// Buttons, links and borders color
+$blue: #66d9ef;
+// Text color for almost everything
+$white: #fff;
+// Empathy text for small titles and the "Advertise on twitter" section
+$yellow: #e6db74;
+// 28 day summary text as well as the sub-header with "Month 2021"
+$orange: #fd971f;
+// Red color for the negative metric values
+$danger: #f92672;
+// Green color for the positive metrics
+$success: #a6e22e;
+
+body, .Sheet .Sheet-container {
+    background-color: $background;
+}
+
+.SharedNavBar--analytics, .ProfileHeader {
+    background-color: $background;
+    border-bottom: $background-darker;
+}
+
+.SharedNavBar--analytics .SharedNavBar-textButton, .SharedNavBar--analytics a, .SharedNavBar--analytics a.SharedNavBar-brand, .SharedNavBar--analytics a.SharedNavBar-brand:focus, .SharedNavBar--analytics a.SharedNavBar-brand:hover, .SharedNavBar--analytics a.SharedNavBar-brand:visited,
+.SharedNavBar--analytics a.SharedNavBar-brand .Icon--logo, .SharedNavBar--analytics a.SharedNavBar-brand:focus .Icon--logo, .SharedNavBar--analytics a.SharedNavBar-brand:hover .Icon--logo, .SharedNavBar--analytics a.SharedNavBar-brand:visited .Icon--logo {
+    color: $blue;
+}
+
+.SharedNavBar--analytics li.SharedNavBar-navItem.is-active>a, .SharedNavBar--analytics li.SharedNavBar-navItem>a:focus, .SharedNavBar--analytics li.SharedNavBar-navItem>a:hover, .SharedNavBar--analytics li.SharedNavBar-navItem>a:visited {
+    color: $yellow;
+}
+
+.LayoutServiceContainer .Button.Button--primary, .LayoutServiceContainer .Button.Button--primary:visited, .LayoutServiceContainer .ButtonGroup--primary>.Button, .LayoutServiceContainer .ButtonGroup--primary>.Button:visited, .LayoutServiceContainer .ButtonGroup--primary>.ButtonGroup>.Button, .LayoutServiceContainer .ButtonGroup--primary>.ButtonGroup>.Button:visited {
+    background-color: $blue;
+    color: $black;
+    background-image: none;
+    border: 0;
+}
+
+.home-subtitle,
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: $orange;
+}
+
+.ProfileHeader .ProfileHeader-cardAvatarLink,
+.profile-card-avatar-link {
+    background: linear-gradient(45deg, $danger, $orange);
+}
+
+.ProfileHeader .ProfileHeader-name,
+.home-summary-panel .DataPoint-info,
+.home-subtitle small,
+.home-dateline small,
+.home-panel-title,
+.home-panel-content .tweet-container .tweet-details .tweet-text,
+.tweet-container .tweet-details .tweet-name,
+a:hover, a:focus,
+.tweet-container .tweet-details .tweet-profile-link:hover .tweet-name,
+.DataPoint .DataPoint-info,
+.profile-card-bio,
+.LayoutServiceContainer .Dropdown-menuGroupLabel, .LayoutServiceContainer .Dropdown-menuItem .Dropdown-menuItemContent,
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    color: $white;
+}
+
+.ProfileHeader .ProfileHeader-screenName,
+.ProfileHeader .ProfileHeader-info .ProfileHeader-note,
+.DataPoint .DataPoint-label,
+.home-panel-title small,
+.home-panel-content .tweet-container .tweet-details .tweet-screen-name,
+.tweet-container .tweet-details .tweet-created-at a,
+.home-panel-info-insight,
+.home-group-header,
+.profile-card-screenname-link {
+    color: $yellow;
+}
+
+.home-group-header.ads {
+    border-top-color: $yellow;
+    color: $yellow;
+}
+
+.ProfileHeader .ProfileHeader-screenName, .ProfileHeader .ProfileHeader-info .ProfileHeader-note, .DataPoint .DataPoint-label, .home-panel-title small, .home-panel-content .tweet-container .tweet-details .tweet-screen-name, .tweet-container .tweet-details .tweet-created-at a, .home-panel-info-insight, .home-group-header {
+    border-color: $yellow;
+}
+
+
+.DataPoint .DataPoint-trend--positive {
+    color: $success;
+}
+
+.DataPoint .DataPoint-trend--negative {
+    color: $danger
+}
+
+.home-group-header {
+    background: $background;
+}
+
+.home-group-header.organic, a, .profile-card-name-link,
+.LayoutServiceContainer .Button.Button--link {
+    color: $blue;
+    border-color: $blue;
+}
+
+
+.home-panel-content .tweet-metrics-container {
+    color: $background-ligher;
+}
+
+.btn.btn-primary, .btn.btn-primary:visited {
+    background: $blue;
+    color: $black;
+}
+
+.SharedNavBar--analytics li.SharedNavBar-navItem.is-active>a, .SharedNavBar--analytics li.SharedNavBar-navItem>a:focus, .SharedNavBar--analytics li.SharedNavBar-navItem>a:hover, .SharedNavBar--analytics li.SharedNavBar-navItem>a:visited {
+    border-color: $blue;
+}
+
+.profile-card {
+    background: $background-darker;
+    padding: .5rem
+}
+
+.profile-card-follows-status{
+    background: $background;
+    color: $yellow;
+}
+
+.btn, .btn-default, .btn:visited, .btn-default:visited, .btn.is-visited, .btn-default.is-visited,
+.LayoutServiceContainer .Dropdown,
+.SharedNavBar-legalMenu {
+    background: $background-darker;
+    color: $white;
 }
