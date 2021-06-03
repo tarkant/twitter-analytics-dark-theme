@@ -111,7 +111,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 }
 
 
-.home-panel-content .tweet-metrics-container {
+.home-panel-content .tweet-metrics-container,
+.daterangepicker .calendar-date td.in-range {
     color: $background-ligher;
 }
 
@@ -139,4 +140,54 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 .SharedNavBar-legalMenu {
     background: $background-darker;
     color: $white;
+}
+
+.main-page-header {
+    background-color: $background-darker;
+    border-bottom: 1px solid $black;
+    h1 {
+        color: $white;
+    }
+}
+
+#tweet-impression-header .headline, #tweet-impression-header .headline-highlight,
+#tweet-impression-sidebar .analysis-body-highlight,
+.tweet-container .tweet-details .tweet-text,
+#tweet-impression-sidebar .analysis-body,
+#tweet-activity-container .tweet-activity-data,
+.metric-time-series .time-series-change, .metric-time-series .time-series-analysis,
+.daterangepicker .daterangepicker-title,
+body,
+.daterangepicker .ranges li,
+.daterangepicker .calendar-date th.month,
+.tweet-impression-chart .barchart-tooltipdate,
+.Dropdown-menuItem .Dropdown-menuItemContent {
+    color: $white;
+}
+
+#tweet-activity-container .tweet-activity-tweet-group:hover {
+    background-color: $background-darker;
+}
+
+.btn.daterange-button,
+.btn:hover, .btn-default:hover, .btn.is-hover, .btn-default.is-hover {
+    background-color: $background;
+}
+
+.btn:hover, .btn-default:hover, .btn.is-hover, .btn-default.is-hover {
+    color: $white;
+}
+
+.dropdown-menu,
+.daterangepicker .ranges li:not(.active):hover,
+.tweet-impression-chart .barchart-tooltip {
+    background-color: $background-darker;
+}
+
+.Icon:before {
+    color: $white;
+}
+
+svg.barchart-svg, .tweet-impression-chart .barchart-colorfill.organic, .tweet-impression-chart .barchart-colorfill.tweets {
+    filter: hue-rotate(-163deg) saturate(4);
 }

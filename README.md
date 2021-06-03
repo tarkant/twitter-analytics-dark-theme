@@ -46,4 +46,5 @@ If you have an issue with the boilerplate or want to contribute, please let me k
 
 ## ⏲ Changelog
 
+- v1.1.0: fix: dark theme in tweets page
 - v1.0.0: Initial version
